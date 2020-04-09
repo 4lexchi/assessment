@@ -12,20 +12,18 @@ data = {
   "totalHospitalBeds": 1380614
 }
 
-currentlyInfected = data["reportedCases"] * 10
-severeImpact = data["reportedCases"] * 50
-output = {
+def estimator(data):
+  days = 0
+  currentlyInfected = data["reportedCases"] * 10
+  severeImpact = data["reportedCases"] * 50
+  data = {
   "data": data,
   "impact": currentlyInfected,
   "severeImpact": severeImpact
-}
+  }
+  data["impact"] = data["impact"] * (2 ** (days//3))
+  data["severeImpact"] = data["severeImpact"] * (2 ** (days//3))
+ # print(data)
+  return(data)
 
-days = 0
-
-def estimator(days):
-  ci = output["impact"] * (2 ** (days//3))
-  si = output["severeImpact"] * (2 ** (days//3))
-  # print("impact: " + str(ci) + ", severeImpact: " + str(si))
-  return ci, si
-
-# estimator(30)
+estimator(data)
