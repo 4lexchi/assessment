@@ -15,7 +15,6 @@
 }
 """
 
-
 def estimator(data): # this function outputs a dictionary after working on the data provided
   duration = data["timeToElapse"] # number of days, weeks or months
   income = data["region"]["avgDailyIncomeInUSD"] # daily income
@@ -60,12 +59,10 @@ def estimator(data): # this function outputs a dictionary after working on the d
   y["casesForVentilatorsByRequestedTime"] = int(y["infectionsByRequestedTime"] * 0.02) # ""
   x["dollarsInFlight"] = int(((x["infectionsByRequestedTime"]) * average * income) / duration) # estimates the amount of money lost within the period 
   y["dollarsInFlight"] = int(((y["infectionsByRequestedTime"]) * average * income) / duration) # ""
-  x.update()
-  y.update()
-
+ 
   # print(type(data))
   # print(data)
-
+  
   return(data) # outputs the worked on data
  
 
