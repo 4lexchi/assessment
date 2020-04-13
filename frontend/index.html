@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>CoViD-19 Estimator | Calculator</title>
+		<meta name="description" content="This is a simple calculator that estimates CoViD-19 figures from different parametres.">
+		<meta name="viewport" content="width=device-width">
+		<meta name="keywords" content="covid, COVID, covid19, covid-19, COVID19, COVID-19">
+		<meta name="author" content="Alex Wachira">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="box-1">
+			<p class="desc">This is a simple calculator that estimates CoViD-19 figures from different parametres.</p>
+			<p class="intro">I am attempting to help the society at large and its leaders prepare for the real big problem of CoViD-19, which is its impact on lives, health systems, supply chains, and the economy.</p>
+			<p>Some of the parametres I try to analyse arise from factors including:</p>
+			<ul>
+				<li>Too many patients and not enough hospitals and/ or beds</li>
+				<li>A serious shortage of ventilators, masks and other PPE</li>
+				<li>Job losses or freezes, low cash flow and low production</li>
+			</ul>
+		</div>
+		
+		<h4>Input your figures below...</h4>
+		
+		<form class="form" action="#" method="POST">
+			<div>
+				<label>Population of region:</label>
+				<input type="number" min="1" data-population name="population" placeholder="Population">
+			</div>
+			<div>
+				<label>Time to elapse:</label>
+				<input type="number" min="0" data-time-to-elapse name="timeToElapse" placeholder="How much time">
+			</div>
+			<div>
+				<label>How many reported cases:</label>
+				<input type="number" min="0" data-reported-cases name="reportedCases" placeholder="Cases reported">
+			</div>
+			<div>
+				<label>How many available beds:</label>
+				<input type="number" min="0" data-total-hospital-beds name="totalHospitalBeds" placeholder="Available beds">
+			</div>
+			<div>
+				<label>Duration of elapsed time:</label>
+				<select data-period-type name="periodType">
+					<option value="days">Days</option>
+					<option value="weeks">Weeks</option>
+					<option value="months">Months</option>
+				</select>
+			</div>
+			<input class="button" type="submit" data-go-estimate name="submit" value="Submit">
+		</form>
+		<footer>
+			<a href="https://www.worldometers.info/coronavirus/">Click for real-time updates...</a>
+			<p>Copyright &copy; 2020 <strong><em>#staysafe</em></strong></p>
+		</footer>
+	</body>
+</html>
