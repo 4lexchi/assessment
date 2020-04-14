@@ -25,28 +25,33 @@
 		
 		<form class="form" action="#" method="POST">
 			<div>
-				<label>Population of region:</label>
+				<label>Population of region:
 				<input type="number" min="1" data-population name="population" placeholder="Population">
+				</label>
 			</div>
 			<div>
-				<label>Time to elapse:</label>
+				<label>Time to elapse:
 				<input type="number" min="0" data-time-to-elapse name="timeToElapse" placeholder="How much time">
+				</label>
 			</div>
 			<div>
-				<label>How many reported cases:</label>
+				<label>How many reported cases:
 				<input type="number" min="0" data-reported-cases name="reportedCases" placeholder="Cases reported">
+				</label>
 			</div>
 			<div>
-				<label>How many available beds:</label>
+				<label>How many available beds:
 				<input type="number" min="0" data-total-hospital-beds name="totalHospitalBeds" placeholder="Available beds">
+				</label>
 			</div>
 			<div>
-				<label>Duration of elapsed time:</label>
-				<select data-period-type name="periodType">
-					<option value="days">Days</option>
-					<option value="weeks">Weeks</option>
-					<option value="months">Months</option>
-				</select>
+				<label>Duration of elapsed time:
+					<select data-period-type name="periodType">
+						<option value="days">Days</option>
+						<option value="weeks">Weeks</option>
+						<option value="months">Months</option>
+					</select>
+				</label>
 			</div>
 			<input class="button" type="submit" data-go-estimate name="submit" value="Submit">
 		</form>
